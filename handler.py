@@ -122,4 +122,5 @@ def handler(job):
             Path(reference_path).unlink(missing_ok=True)
 
 
-runpod.serverless.start({"handler": handler})
+if __name__ == "__main__":
+    runpod.serverless.start({"handler": handler})
