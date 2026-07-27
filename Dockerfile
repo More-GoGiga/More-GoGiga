@@ -3,7 +3,7 @@ FROM pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime
 ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
-    HF_HOME=/runpod-volume/huggingface
+    HF_HOME=/runpod-volume/huggingface-cache
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends git ffmpeg libsndfile1 \
